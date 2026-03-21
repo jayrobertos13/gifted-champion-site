@@ -184,7 +184,7 @@ export default function ProductsPage() {
 
                 {/* Info */}
                 <div className="p-8">
-                  <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-start justify-between mb-3 gap-4">
                     <div>
                       <span className="text-[10px] tracking-[0.25em] uppercase text-copper/60">
                         {product.category}
@@ -197,7 +197,7 @@ export default function ProductsPage() {
                       </h3>
                     </div>
                     <span
-                      className="text-xl font-light text-copper"
+                      className="text-xl font-light text-copper shrink-0"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       ${product.price}

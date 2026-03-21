@@ -81,7 +81,7 @@ export default function Navbar() {
               </Link>
 
               {/* Book Now CTA */}
-              <a href="#services" className="btn-copper text-[11px] py-3 px-7">
+              <a href="/#services" className="btn-copper text-[11px] py-3 px-7">
                 Book Now
               </a>
             </div>
@@ -138,7 +138,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="#services"
+              href="/#services"
               onClick={() => setIsOpen(false)}
               className="btn-copper text-xs py-3.5 px-6 text-center mt-2"
             >

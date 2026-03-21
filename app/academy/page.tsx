@@ -2,7 +2,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Image from "next/image";
+
 import { useState } from "react";
 
 const courses = [
@@ -163,13 +163,13 @@ export default function AcademyPage() {
             </div>
 
             {/* Stats */}
-            <div className="mt-12 md:mt-20 flex gap-8 md:gap-14 animate-fade-in opacity-0 delay-700">
+            <div className="mt-12 md:mt-20 flex gap-10 md:gap-16 animate-fade-in opacity-0 delay-700">
               {[
                 { value: "500+", label: "Students" },
                 { value: "50+", label: "Lessons" },
                 { value: "4.9", label: "Avg Rating" },
               ].map((stat) => (
-                <div key={stat.label}>
+                <div key={stat.label} className="text-center">
                   <div className="text-2xl md:text-3xl font-light text-copper" style={{ fontFamily: "var(--font-display)" }}>
                     {stat.value}
                   </div>
@@ -283,7 +283,7 @@ export default function AcademyPage() {
                   {course.description}
                 </p>
 
-                <div className="flex gap-8 mt-8 mb-8">
+                <div className="flex gap-8 mt-8 mb-8 justify-center">
                   <div className="flex items-center gap-2 text-cream-dim text-xs">
                     <svg className="w-4 h-4 text-copper" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />

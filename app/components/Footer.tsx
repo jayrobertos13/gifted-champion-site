@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="copper-line" />
 
       <div className="max-w-7xl mx-auto px-8 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
           {/* Brand */}
-          <div className="md:col-span-2 flex flex-col gap-5">
+          <div className="md:col-span-5 flex flex-col gap-5">
             <img
               src="/logo.png"
               alt="Gifted Champion"
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col gap-4">
+          <div className="md:col-span-3 md:text-center flex flex-col gap-4">
             <h4 className="text-copper text-[11px] tracking-[0.3em] uppercase font-semibold">
               Quick Links
             </h4>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           {/* Hours */}
-          <div className="flex flex-col gap-4">
+          <div className="md:col-span-4 md:text-right flex flex-col gap-4">
             <h4 className="text-copper text-[11px] tracking-[0.3em] uppercase font-semibold">
               Hours
             </h4>

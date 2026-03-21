@@ -140,9 +140,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className="flex items-center gap-6 md:gap-8 py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500 px-2 md:px-6">
+                <div className="flex items-center gap-6 md:gap-8 py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500 px-4 md:px-8">
                   <span
-                    className="text-copper/15 text-3xl md:text-4xl font-normal w-12 shrink-0 hidden sm:block"
+                    className="text-copper/15 text-3xl md:text-4xl font-normal w-12 shrink-0 hidden sm:block text-center"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -240,7 +240,7 @@ export default function Home() {
                 and an experience that keeps you coming back.
               </p>
 
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-3 gap-6 text-center">
                 {[
                   { value: "5+", label: "Years" },
                   { value: "1,000+", label: "Clients" },
@@ -280,7 +280,7 @@ export default function Home() {
           </div>
 
           {/* Masonry grid — all Unsplash barber images with reliable IDs */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[260px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[260px]">
             {[
               { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80&auto=format&fit=crop", alt: "Precision fade", tall: true },
               { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop", alt: "Classic cut", tall: false },
@@ -391,9 +391,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper mt-10 w-full sm:w-auto">
-                Book Appointment
-              </a>
+              <div className="mt-10">
+                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper w-full sm:w-auto">
+                  Book Appointment
+                </a>
+              </div>
             </div>
 
             {/* Map / location placeholder */}
