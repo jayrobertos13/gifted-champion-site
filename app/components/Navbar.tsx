@@ -38,8 +38,7 @@ export default function Navbar() {
               <img
                 src="/logo.png"
                 alt="Gifted Champion"
-                style={{ height: "44px", width: "auto" }}
-                className="logo-img group-hover:brightness-125 transition-all duration-500"
+                className="logo-img group-hover:brightness-125 transition-all duration-500 h-9 md:h-11 w-auto"
               />
             </Link>
 
@@ -90,10 +89,10 @@ export default function Navbar() {
             {/* Mobile toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-cream p-2"
+              className="lg:hidden text-cream p-3 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              <div className="w-7 flex flex-col gap-[6px]">
+              <div className="w-6 flex flex-col gap-[5px]">
                 <span
                   className={`block h-[1px] bg-copper transition-all duration-400 ${
                     isOpen ? "rotate-45 translate-y-[7px]" : ""

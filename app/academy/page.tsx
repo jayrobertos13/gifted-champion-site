@@ -137,7 +137,7 @@ export default function AcademyPage() {
             </div>
 
             <h1
-              className="mt-8 text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight animate-fade-in-up opacity-0 delay-200"
+              className="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight animate-fade-in-up opacity-0 delay-200"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Learn to Cut
@@ -163,7 +163,7 @@ export default function AcademyPage() {
             </div>
 
             {/* Stats */}
-            <div className="mt-20 flex gap-14 animate-fade-in opacity-0 delay-700">
+            <div className="mt-12 md:mt-20 flex gap-8 md:gap-14 animate-fade-in opacity-0 delay-700">
               {[
                 { value: "500+", label: "Students" },
                 { value: "50+", label: "Lessons" },

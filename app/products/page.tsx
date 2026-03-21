@@ -119,7 +119,7 @@ export default function ProductsPage() {
             <span className="w-10 h-[1px] bg-copper" />
           </span>
           <h1
-            className="mt-6 text-5xl md:text-6xl lg:text-7xl font-light tracking-tight"
+            className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
             The <span className="italic copper-shimmer">Collection</span>
@@ -134,12 +134,12 @@ export default function ProductsPage() {
       <section className="section-padding relative texture-dark">
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Category filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-20">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 md:mb-20">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 text-[11px] tracking-[0.2em] uppercase transition-all duration-400 cursor-pointer ${
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 text-[11px] tracking-[0.15em] sm:tracking-[0.2em] uppercase transition-all duration-400 cursor-pointer min-h-[44px] ${
                   activeCategory === cat
                     ? "bg-gradient-to-r from-copper to-copper-light text-black font-semibold"
                     : "bg-transparent text-cream-dim border border-white/10 hover:border-copper/30 hover:text-copper"
@@ -206,7 +206,7 @@ export default function ProductsPage() {
                   <p className="text-cream-dim text-sm leading-relaxed mt-3">
                     {product.description}
                   </p>
-                  <button className="mt-6 w-full btn-outline-copper text-[10px] py-3 cursor-pointer">
+                  <button className="mt-6 w-full btn-outline-copper text-[11px] cursor-pointer">
                     Add to Cart
                   </button>
                 </div>
