@@ -3,8 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Gifted Champion | Premium Barber Services",
-  description: "Book your next cut with Gifted Champion. Premium barber services, education courses, and professional products.",
-  keywords: ["barber", "haircut", "beard", "grooming", "barber courses", "gifted champion"],
+  description: "Master craftsmanship. Champion style. Book premium barber services, learn the craft through expert courses, and shop curated products.",
+  keywords: ["barber", "haircut", "beard", "grooming", "barber courses", "gifted champion", "premium barber"],
 };
 
 export default function RootLayout({

@@ -2,66 +2,91 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-      {/* Top gold line */}
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
-
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+        scrolled ? "shadow-2xl" : ""
+      }`}
+    >
       <div
-        className="backdrop-blur-xl"
-        style={{ background: "rgba(10, 10, 10, 0.85)" }}
+        className="transition-all duration-700"
+        style={{
+          background: scrolled
+            ? "rgba(10, 10, 10, 0.95)"
+            : "rgba(10, 10, 10, 0.3)",
+          backdropFilter: scrolled ? "blur(20px)" : "blur(8px)",
+          WebkitBackdropFilter: scrolled ? "blur(20px)" : "blur(8px)",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+        {/* Thin copper accent line */}
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-copper to-transparent opacity-30" />
+
+        <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <div className="flex items-center justify-between h-22 py-4">
+            {/* Logo — transparent via mix-blend-mode */}
+            <Link href="/" className="flex items-center group relative">
               <Image
                 src="/logo.png"
                 alt="Gifted Champion"
-                width={160}
-                height={60}
-                className="h-12 w-auto brightness-100 group-hover:brightness-125 transition-all duration-300"
+                width={180}
+                height={70}
+                className="h-14 w-auto logo-transparent group-hover:brightness-125 transition-all duration-500"
                 priority
               />
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-10">
+            <div className="hidden lg:flex items-center gap-12">
               <Link
-                href="/"
-                className="text-cream-dim hover:text-gold text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300"
+                href="/#services"
+                className="text-cream-dim hover:text-copper text-[11px] font-medium tracking-[0.25em] uppercase transition-all duration-400 relative group"
               >
-                Book
+                Services
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-copper transition-all duration-400 group-hover:w-full" />
+              </Link>
+              <Link
+                href="/#gallery"
+                className="text-cream-dim hover:text-copper text-[11px] font-medium tracking-[0.25em] uppercase transition-all duration-400 relative group"
+              >
+                Gallery
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-copper transition-all duration-400 group-hover:w-full" />
               </Link>
               <Link
                 href="/academy"
-                className="text-cream-dim hover:text-gold text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300"
+                className="text-cream-dim hover:text-copper text-[11px] font-medium tracking-[0.25em] uppercase transition-all duration-400 relative group"
               >
                 Academy
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-copper transition-all duration-400 group-hover:w-full" />
               </Link>
               <Link
                 href="/products"
-                className="text-cream-dim hover:text-gold text-xs font-medium tracking-[0.2em] uppercase transition-colors duration-300"
+                className="text-cream-dim hover:text-copper text-[11px] font-medium tracking-[0.25em] uppercase transition-all duration-400 relative group"
               >
                 Products
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-copper transition-all duration-400 group-hover:w-full" />
               </Link>
-              <a
-                href="https://www.instagram.com/giftedchampion/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream-dim hover:text-gold transition-colors duration-300"
-                aria-label="Instagram"
+              <Link
+                href="/#contact"
+                className="text-cream-dim hover:text-copper text-[11px] font-medium tracking-[0.25em] uppercase transition-all duration-400 relative group"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-              </a>
-              <a href="#services" className="btn-gold text-xs py-3 px-6">
+                Contact
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-copper transition-all duration-400 group-hover:w-full" />
+              </Link>
+
+              {/* Book Now CTA */}
+              <a href="#services" className="btn-copper text-[11px] py-3 px-7">
                 Book Now
               </a>
             </div>
@@ -69,22 +94,22 @@ export default function Navbar() {
             {/* Mobile toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-cream p-2"
+              className="lg:hidden text-cream p-2"
               aria-label="Toggle menu"
             >
-              <div className="w-6 flex flex-col gap-1.5">
+              <div className="w-7 flex flex-col gap-[6px]">
                 <span
-                  className={`block h-[1px] bg-gold transition-all duration-300 ${
+                  className={`block h-[1px] bg-copper transition-all duration-400 ${
                     isOpen ? "rotate-45 translate-y-[7px]" : ""
                   }`}
                 />
                 <span
-                  className={`block h-[1px] bg-gold transition-all duration-300 ${
+                  className={`block h-[1px] bg-copper transition-all duration-400 ${
                     isOpen ? "opacity-0" : ""
                   }`}
                 />
                 <span
-                  className={`block h-[1px] bg-gold transition-all duration-300 ${
+                  className={`block h-[1px] bg-copper transition-all duration-400 ${
                     isOpen ? "-rotate-45 -translate-y-[7px]" : ""
                   }`}
                 />
@@ -95,36 +120,32 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ${
-            isOpen ? "max-h-80" : "max-h-0"
+          className={`lg:hidden overflow-hidden transition-all duration-600 ${
+            isOpen ? "max-h-[420px]" : "max-h-0"
           }`}
+          style={{ background: "rgba(10, 10, 10, 0.98)" }}
         >
-          <div className="px-6 pb-8 pt-2 flex flex-col gap-6">
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="text-cream-dim hover:text-gold text-sm tracking-[0.2em] uppercase transition-colors"
-            >
-              Book
-            </Link>
-            <Link
-              href="/academy"
-              onClick={() => setIsOpen(false)}
-              className="text-cream-dim hover:text-gold text-sm tracking-[0.2em] uppercase transition-colors"
-            >
-              Academy
-            </Link>
-            <Link
-              href="/products"
-              onClick={() => setIsOpen(false)}
-              className="text-cream-dim hover:text-gold text-sm tracking-[0.2em] uppercase transition-colors"
-            >
-              Products
-            </Link>
+          <div className="px-8 pb-10 pt-4 flex flex-col gap-7">
+            {[
+              { href: "/#services", label: "Services" },
+              { href: "/#gallery", label: "Gallery" },
+              { href: "/academy", label: "Academy" },
+              { href: "/products", label: "Products" },
+              { href: "/#contact", label: "Contact" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-cream-dim hover:text-copper text-sm tracking-[0.25em] uppercase transition-all duration-300"
+              >
+                {item.label}
+              </Link>
+            ))}
             <a
               href="#services"
               onClick={() => setIsOpen(false)}
-              className="btn-gold text-xs py-3 px-6 text-center"
+              className="btn-copper text-xs py-3.5 px-6 text-center mt-2"
             >
               Book Now
             </a>
