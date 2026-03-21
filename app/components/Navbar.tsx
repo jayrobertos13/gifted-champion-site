@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -35,15 +34,12 @@ export default function Navbar() {
 
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
           <div className="flex items-center justify-between h-22 py-4">
-            {/* Logo — transparent via mix-blend-mode */}
             <Link href="/" className="flex items-center group relative">
-              <Image
+              <img
                 src="/logo.png"
                 alt="Gifted Champion"
-                width={425}
-                height={402}
-                className="h-12 w-auto logo-img group-hover:brightness-125 transition-all duration-500"
-                priority
+                style={{ height: "44px", width: "auto" }}
+                className="logo-img group-hover:brightness-125 transition-all duration-500"
               />
             </Link>
 

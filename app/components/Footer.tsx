@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,12 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div className="md:col-span-2 flex flex-col gap-5">
-            <Image
+            <img
               src="/logo.png"
               alt="Gifted Champion"
-              width={425}
-              height={402}
-              className="h-14 w-auto logo-img"
+              style={{ height: "50px", width: "auto" }}
+              className="logo-img"
             />
             <p className="text-cream-dim text-sm leading-relaxed max-w-sm">
               Premium barber services, expert education, and curated products.

@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Image from "next/image";
 
 const services = [
   {
@@ -62,13 +61,11 @@ export default function Home() {
         <div className="relative z-10 text-center px-8 max-w-4xl mx-auto flex flex-col items-center">
           {/* Logo — centered, proportional, transparent bg */}
           <div className="animate-scale-in opacity-0 delay-200 flex justify-center">
-            <Image
+            <img
               src="/logo.png"
               alt="Gifted Champion"
-              width={425}
-              height={402}
-              className="logo-img w-[220px] md:w-[300px] lg:w-[360px]"
-              priority
+              className="logo-img"
+              style={{ width: "min(320px, 60vw)", height: "auto" }}
             />
           </div>
 
