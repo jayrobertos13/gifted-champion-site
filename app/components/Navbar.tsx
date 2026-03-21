@@ -40,9 +40,9 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Gifted Champion"
-                width={180}
-                height={70}
-                className="h-14 w-auto logo-transparent group-hover:brightness-125 transition-all duration-500"
+                width={425}
+                height={402}
+                className="h-12 w-auto logo-img group-hover:brightness-125 transition-all duration-500"
                 priority
               />
             </Link>

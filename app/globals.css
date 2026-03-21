@@ -290,7 +290,10 @@ body {
   }
 }
 
-/* ── Logo transparency (makes black bg transparent) ── */
-.logo-transparent {
-  mix-blend-mode: screen;
+/* ── Logo ── */
+.logo-img {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }

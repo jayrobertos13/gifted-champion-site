@@ -13,9 +13,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Gifted Champion"
-              width={180}
-              height={70}
-              className="h-14 w-auto logo-transparent"
+              width={425}
+              height={402}
+              className="h-14 w-auto logo-img"
             />
             <p className="text-cream-dim text-sm leading-relaxed max-w-sm">
               Premium barber services, expert education, and curated products.
