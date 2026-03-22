@@ -59,9 +59,14 @@ export default function Footer() {
 
         <div className="copper-line opacity-20" style={{ marginTop: "56px", marginBottom: "32px" }} />
 
-        <p className="text-cream-dim/30 text-xs tracking-[0.15em]" style={{ textAlign: "center" }}>
-          &copy; {new Date().getFullYear()} Gifted Champion. All rights reserved.
-        </p>
+        <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+          <p className="text-cream-dim/30 text-xs tracking-[0.15em]">
+            &copy; {new Date().getFullYear()} Gifted Champion. All rights reserved.
+          </p>
+          <Link href="/privacy" className="text-cream-dim/30 hover:text-copper text-[11px] tracking-[0.1em] transition-colors">
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </footer>
   );
