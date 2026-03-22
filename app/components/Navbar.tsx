@@ -16,17 +16,20 @@ export default function Navbar() {
 
       // Hide navbar on scroll down, show on scroll up (mobile only)
       if (window.innerWidth < 1024) {
-        if (currentY > lastScrollY.current && currentY > 80) {
+        const diff = currentY - lastScrollY.current;
+        // Only react to scrolls larger than 10px to prevent jitter
+        if (diff > 10 && currentY > 80) {
           setHidden(true);
           setIsOpen(false);
-        } else {
+          lastScrollY.current = currentY;
+        } else if (diff < -10) {
           setHidden(false);
+          lastScrollY.current = currentY;
         }
       } else {
         setHidden(false);
+        lastScrollY.current = currentY;
       }
-
-      lastScrollY.current = currentY;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -42,10 +45,10 @@ export default function Navbar() {
         className="transition-all duration-700"
         style={{
           background: scrolled
-            ? "rgba(10, 10, 10, 0.95)"
+            ? "rgba(10, 10, 10, 0.97)"
             : "rgba(10, 10, 10, 0.3)",
-          backdropFilter: scrolled ? "blur(20px)" : "blur(8px)",
-          WebkitBackdropFilter: scrolled ? "blur(20px)" : "blur(8px)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
         }}
       >
         {/* Thin copper accent line */}
