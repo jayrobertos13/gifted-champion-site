@@ -5,33 +5,45 @@ import VideoGallery from "./components/InstagramEmbed";
 const services = [
   {
     name: "Haircut & Beard",
-    price: 60,
+    price: 55,
     duration: "45 min",
     description: "Full precision haircut paired with an expert beard sculpt and shape-up.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=3K75TUUZ2XDKGFC7CVZOCH4N",
   },
   {
-    name: "Kids Haircut",
+    name: "Beard Shave",
+    price: 40,
+    duration: "45 min",
+    description: "A clean, precise beard shave with hot towel treatment and smooth finish.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=VD4VHRNOSQH6F2J62MCBJNJX",
+  },
+  {
+    name: "Kids Hair Cut",
     price: 40,
     duration: "30 min",
     description: "Clean, stylish cuts for the younger generation. Patient and precise.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=JPVWQVWDCU6OEUTQBEFHRQFY",
   },
   {
     name: "Line Ups",
     price: 30,
     duration: "30 min",
     description: "Crisp edges and razor-sharp line work to keep you looking right.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=TXUWIVGSWYCQBGRNWGTZ564J",
   },
   {
-    name: "Regular Haircut",
-    price: 45,
+    name: "Regular Hair Cut",
+    price: 40,
     duration: "30 min",
     description: "A classic precision cut tailored to your face shape and personal style.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=43QRGL357EP5DORES46FZYIT",
   },
   {
-    name: "Haircut & Design",
-    price: 60,
+    name: "Haircut and Design",
+    price: 45,
     duration: "45 min",
-    description: "Custom haircut with artistic design work. True craftsmanship on display.",
+    description: "Custom haircut with artistic design work. Ask about desired design to know exact price.",
+    link: "https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/availability?staff_id=TM29O_i2Cbo5C5v1&service_id=VWBFUG4MGAO4CD5UOOU5J7FH",
   },
 ];
 
@@ -122,7 +134,7 @@ export default function Home() {
             {services.map((service, i) => (
               <a
                 key={service.name}
-                href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services"
+                href={service.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
