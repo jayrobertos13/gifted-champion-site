@@ -26,7 +26,8 @@ export default function VideoGallery() {
             src={src}
             controls
             playsInline
-            preload="metadata"
+            preload="auto"
+            poster={src.replace("/videos/", "/videos/thumbs/").replace(".mp4", ".jpg")}
             style={{
               width: "100%",
               height: "100%",
