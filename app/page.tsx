@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import InstagramEmbed from "./components/InstagramEmbed";
 
 const services = [
   {
@@ -263,34 +264,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[260px]">
-            {[
-              { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80&auto=format&fit=crop", alt: "Precision fade", tall: true },
-              { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop", alt: "Classic cut", tall: false },
-              { src: "https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?w=600&q=80&auto=format&fit=crop", alt: "Beard work", tall: false },
-              { src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80&auto=format&fit=crop", alt: "Detail work", tall: true },
-              { src: "https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80&auto=format&fit=crop", alt: "Transformation", tall: false },
-              { src: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=600&q=80&auto=format&fit=crop", alt: "Clean lineup", tall: false },
-            ].map((img, i) => (
-              <div
-                key={i}
-                className={`relative overflow-hidden rounded-sm group cursor-pointer ${img.tall ? "row-span-2" : ""}`}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-end">
-                  <div className="p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <p className="text-cream text-sm tracking-wider">{img.alt}</p>
-                    <div className="w-6 h-[1px] bg-copper mt-2" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <InstagramEmbed />
 
           <div style={{ textAlign: "center", marginTop: "56px" }}>
             <a
