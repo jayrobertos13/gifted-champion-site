@@ -281,7 +281,15 @@ export default function Home() {
 
           <VideoGallery />
 
-          <div style={{ textAlign: "center", marginTop: "56px" }}>
+          <div style={{ textAlign: "center", marginTop: "56px", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
+            <a
+              href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-copper"
+            >
+              Book Now
+            </a>
             <a
               href="https://www.instagram.com/giftedchampion/"
               target="_blank"
