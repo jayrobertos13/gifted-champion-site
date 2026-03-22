@@ -201,6 +201,12 @@ export default function Home() {
               <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
                 The Champion Guarantee
               </span>
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight"
+                style={{ fontFamily: "var(--font-display)", marginTop: "20px" }}
+              >
+                Meet <span className="italic copper-shimmer">Joshua</span>
+              </h2>
 
               <div className="relative border-l-2 border-copper/30" style={{ marginTop: "32px", marginBottom: "40px", paddingLeft: "28px" }}>
                 <p
