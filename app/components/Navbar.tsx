@@ -1,23 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 40);
+
+      // Hide navbar on scroll down, show on scroll up (mobile only)
+      if (window.innerWidth < 1024) {
+        if (currentY > lastScrollY.current && currentY > 80) {
+          setHidden(true);
+          setIsOpen(false);
+        } else {
+          setHidden(false);
+        }
+      } else {
+        setHidden(false);
+      }
+
+      lastScrollY.current = currentY;
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled ? "shadow-2xl" : ""
-      }`}
+      } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div
         className="transition-all duration-700"
@@ -32,7 +51,7 @@ export default function Navbar() {
         {/* Thin copper accent line */}
         <div className="h-[1px] bg-gradient-to-r from-transparent via-copper to-transparent opacity-30" />
 
-        <div className="max-w-7xl mx-auto px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-22 py-4">
             <Link href="/" className="flex items-center group relative">
               <img

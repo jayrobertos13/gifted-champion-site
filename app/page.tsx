@@ -58,14 +58,14 @@ export default function Home() {
         <div className="absolute bottom-10 left-10 w-24 h-24 border-b border-l border-copper/20 hidden lg:block" />
         <div className="absolute bottom-10 right-10 w-24 h-24 border-b border-r border-copper/20 hidden lg:block" />
 
-        <div className="relative z-10 text-center px-8 max-w-4xl mx-auto flex flex-col items-center">
-          {/* Logo — centered, proportional, transparent bg */}
+        <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto flex flex-col items-center">
+          {/* Logo */}
           <div className="animate-scale-in opacity-0 delay-200 flex justify-center">
             <img
               src="/logo.png"
               alt="Gifted Champion"
               className="logo-img"
-              style={{ width: "min(320px, 60vw)", height: "auto" }}
+              style={{ width: "min(280px, 55vw)", height: "auto" }}
             />
           </div>
 
@@ -82,29 +82,20 @@ export default function Home() {
             Master Craftsmanship. <span className="copper-shimmer">Champion Style.</span>
           </h1>
 
-          <p className="mt-5 text-cream-dim text-sm md:text-base max-w-md mx-auto tracking-wide animate-fade-in opacity-0 delay-700">
+          <p className="mt-6 text-cream-dim text-sm md:text-base max-w-md mx-auto tracking-wide leading-relaxed animate-fade-in opacity-0 delay-700">
             Premium cuts, precision fades, and artistry that speaks for itself.
           </p>
 
-          {/* CTA */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up opacity-0 delay-800">
+          {/* CTA — single button */}
+          <div className="mt-12 animate-fade-in-up opacity-0 delay-800">
             <a href="#services" className="btn-copper">
               Book Your Appointment
-            </a>
-            <a
-              href="https://www.instagram.com/giftedchampion/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline-copper"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              Follow the Journey
             </a>
           </div>
         </div>
 
         {/* Scroll */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float hidden sm:block">
           <div className="flex flex-col items-center gap-2">
             <span className="text-copper/40 text-[9px] tracking-[0.3em] uppercase">Scroll</span>
             <div className="w-[1px] h-8 bg-gradient-to-b from-copper/40 to-transparent" />
@@ -114,13 +105,13 @@ export default function Home() {
 
       {/* ══════════ SERVICES ══════════ */}
       <section id="services" className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-2 sm:px-0">
+          <div className="text-center mb-16 md:mb-20">
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Our Services
             </span>
             <h2
-              className="mt-5 text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
+              className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
               style={{ fontFamily: "var(--font-display)" }}
             >
               The <span className="italic copper-shimmer">Menu</span>
@@ -140,7 +131,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className="flex items-center gap-6 md:gap-8 py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500 px-4 md:px-8">
+                <div className="flex items-center gap-4 sm:gap-6 md:gap-8 py-8 md:py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500 px-2 sm:px-4 md:px-8">
                   <span
                     className="text-copper/15 text-3xl md:text-4xl font-normal w-12 shrink-0 hidden sm:block text-center"
                     style={{ fontFamily: "var(--font-display)" }}
@@ -151,7 +142,7 @@ export default function Home() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline gap-3 flex-wrap">
                       <h3
-                        className="text-xl md:text-2xl font-normal text-cream group-hover:text-copper transition-colors duration-400"
+                        className="text-lg sm:text-xl md:text-2xl font-normal text-cream group-hover:text-copper transition-colors duration-400"
                         style={{ fontFamily: "var(--font-display)" }}
                       >
                         {service.name}
@@ -160,20 +151,20 @@ export default function Home() {
                         {service.duration}
                       </span>
                     </div>
-                    <p className="text-cream-dim text-sm mt-1.5 max-w-sm">
+                    <p className="text-cream-dim text-sm mt-2 max-w-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-5 shrink-0">
+                  <div className="flex items-center gap-3 sm:gap-5 shrink-0">
                     <span
-                      className="text-2xl md:text-3xl font-normal text-copper"
+                      className="text-xl sm:text-2xl md:text-3xl font-normal text-copper"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       ${service.price}
                     </span>
-                    <div className="w-10 h-10 rounded-full border border-copper/20 flex items-center justify-center group-hover:bg-copper group-hover:border-copper transition-all duration-400">
-                      <svg className="w-4 h-4 text-copper group-hover:text-black transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-copper/20 flex items-center justify-center group-hover:bg-copper group-hover:border-copper transition-all duration-400">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-copper group-hover:text-black transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                       </svg>
                     </div>
@@ -229,12 +220,12 @@ export default function Home() {
 
               <div className="copper-line-left w-16 mb-8" />
 
-              <p className="text-cream-dim leading-relaxed mb-5">
+              <p className="text-cream-dim leading-relaxed mb-6">
                 At Gifted Champion, respect for the craft is everything. A haircut
                 should make you feel like the best version of yourself — confident,
                 sharp, and ready for anything.
               </p>
-              <p className="text-cream-dim leading-relaxed mb-10">
+              <p className="text-cream-dim leading-relaxed mb-12">
                 Built on classic barbering standards and elevated with modern artistry,
                 every service delivers precision, consistency,
                 and an experience that keeps you coming back.
@@ -264,12 +255,12 @@ export default function Home() {
       {/* ══════════ GALLERY ══════════ */}
       <section id="gallery" className="section-padding relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16 md:mb-20">
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               The Work
             </span>
             <h2
-              className="mt-5 text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
+              className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Precision in Every <span className="italic copper-shimmer">Detail</span>
@@ -279,7 +270,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Masonry grid — all Unsplash barber images with reliable IDs */}
+          {/* Masonry grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[260px]">
             {[
               { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80&auto=format&fit=crop", alt: "Precision fade", tall: true },
@@ -325,13 +316,13 @@ export default function Home() {
 
       {/* ══════════ CONTACT ══════════ */}
       <section id="contact" className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16 md:mb-20">
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Get in Touch
             </span>
             <h2
-              className="mt-5 text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
+              className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Visit the <span className="italic copper-shimmer">Shop</span>
@@ -341,9 +332,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Contact info */}
-            <div className="glass-card rounded-sm p-10 md:p-12">
+            <div className="glass-card rounded-sm p-8 sm:p-10 md:p-14">
               <h3
                 className="text-2xl font-normal text-cream mb-10"
                 style={{ fontFamily: "var(--font-display)" }}
@@ -351,13 +342,13 @@ export default function Home() {
                 Book your next visit
               </h3>
 
-              <div className="space-y-8">
+              <div className="space-y-9">
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 rounded-full border border-copper/20 flex items-center justify-center shrink-0">
                     <svg className="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1">Instagram</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Instagram</p>
                     <a href="https://www.instagram.com/giftedchampion/" target="_blank" rel="noopener noreferrer" className="text-copper hover:text-copper-light transition-colors">
                       @giftedchampion
                     </a>
@@ -371,10 +362,10 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1">Hours</p>
-                    <p className="text-cream text-sm">Mon–Fri: 9am – 7pm</p>
-                    <p className="text-cream text-sm">Sat: 8am – 6pm</p>
-                    <p className="text-cream text-sm">Sun: By Appointment</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Hours</p>
+                    <p className="text-cream text-sm leading-relaxed">Mon–Fri: 9am – 7pm</p>
+                    <p className="text-cream text-sm leading-relaxed">Sat: 8am – 6pm</p>
+                    <p className="text-cream text-sm leading-relaxed">Sun: By Appointment</p>
                   </div>
                 </div>
 
@@ -385,13 +376,13 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1">Phone</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Phone</p>
                     <p className="text-cream text-sm">DM on Instagram to book</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-12">
                 <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper w-full sm:w-auto">
                   Book Appointment
                 </a>
@@ -408,14 +399,14 @@ export default function Home() {
                   backgroundSize: "30px 30px",
                 }} />
                 <div className="text-center relative z-10">
-                  <div className="w-14 h-14 rounded-full border border-copper/30 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 rounded-full border border-copper/30 flex items-center justify-center mx-auto mb-5">
                     <svg className="w-6 h-6 text-copper" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </div>
                   <p className="text-cream text-lg" style={{ fontFamily: "var(--font-display)" }}>Location Coming Soon</p>
-                  <p className="text-cream-dim text-sm mt-2">DM on Instagram for directions</p>
+                  <p className="text-cream-dim text-sm mt-3">DM on Instagram for directions</p>
                 </div>
               </div>
             </div>
@@ -424,16 +415,16 @@ export default function Home() {
       </section>
 
       {/* ══════════ FINAL CTA ══════════ */}
-      <section className="relative py-28 px-8 overflow-hidden">
-        <div className="copper-line mb-20" />
+      <section className="relative py-24 md:py-32 px-6 sm:px-8 overflow-hidden">
+        <div className="copper-line mb-16 md:mb-20" />
         <div className="max-w-3xl mx-auto text-center">
           <h2
-            className="text-3xl md:text-5xl font-normal tracking-tight mb-8"
+            className="text-3xl md:text-5xl font-normal tracking-tight mb-6 md:mb-8"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Ready for the <span className="italic copper-shimmer">Experience</span>?
           </h2>
-          <p className="text-cream-dim mb-10 max-w-lg mx-auto">
+          <p className="text-cream-dim mb-10 md:mb-12 max-w-lg mx-auto leading-relaxed">
             Don&apos;t just get a haircut — get a Gifted Champion cut.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -441,7 +432,7 @@ export default function Home() {
             <a href="/academy" className="btn-outline-copper">Learn the Craft</a>
           </div>
         </div>
-        <div className="copper-line mt-20" />
+        <div className="copper-line mt-16 md:mt-20" />
       </section>
 
       <Footer />
