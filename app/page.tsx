@@ -337,12 +337,15 @@ export default function Home() {
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 rounded-full border border-copper/20 flex items-center justify-center shrink-0">
                     <svg className="w-4 h-4 text-copper" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Phone</p>
-                    <p className="text-cream text-sm">DM on Instagram to book</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Location</p>
+                    <p className="text-cream text-sm">Fadez &amp; Bladez Barbershop</p>
+                    <p className="text-cream-dim text-sm">28087 Bradley Rd</p>
+                    <p className="text-cream-dim text-sm">Menifee, CA 92586</p>
                   </div>
                 </div>
               </div>
@@ -354,24 +357,26 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="glass-card rounded-sm overflow-hidden relative" style={{ minHeight: "420px" }}>
-              <div className="absolute inset-0 flex items-center justify-center" style={{
-                background: "linear-gradient(145deg, #1a1a1a, #111)"
-              }}>
-                <div className="absolute inset-0 opacity-15" style={{
-                  backgroundImage: "linear-gradient(rgba(184,115,51,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(184,115,51,0.08) 1px, transparent 1px)",
-                  backgroundSize: "30px 30px",
-                }} />
-                <div style={{ textAlign: "center", position: "relative", zIndex: 10 }}>
-                  <div className="rounded-full border border-copper/30 flex items-center justify-center" style={{ width: "56px", height: "56px", margin: "0 auto 20px" }}>
-                    <svg className="w-6 h-6 text-copper" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-cream text-lg" style={{ fontFamily: "var(--font-display)" }}>Location Coming Soon</p>
-                  <p className="text-cream-dim text-sm" style={{ marginTop: "12px" }}>DM on Instagram for directions</p>
-                </div>
+            <div className="glass-card rounded-sm overflow-hidden relative" style={{ minHeight: "420px", display: "flex", flexDirection: "column" }}>
+              <div style={{ flex: 1, minHeight: "300px" }}>
+                <iframe
+                  src="https://www.google.com/maps?q=Fadez+%26+Bladez+Barbershop+28087+Bradley+Rd+Menifee+CA+92586&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: "block", filter: "invert(90%) hue-rotate(180deg) saturate(0.3) brightness(0.8)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Fadez and Bladez Barbershop location"
+                />
+              </div>
+              <div style={{ padding: "20px 24px", background: "rgba(10,10,10,0.95)" }}>
+                <p className="text-cream text-sm font-medium" style={{ fontFamily: "var(--font-display)" }}>
+                  Fadez and Bladez Barbershop
+                </p>
+                <p className="text-cream-dim text-xs" style={{ marginTop: "6px" }}>
+                  28087 Bradley Rd, Menifee, CA 92586
+                </p>
               </div>
             </div>
           </div>
