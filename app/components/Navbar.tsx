@@ -14,15 +14,22 @@ export default function Navbar() {
       const currentY = window.scrollY;
       setScrolled(currentY > 40);
 
-      // Hide navbar on scroll down, show on scroll up (mobile only)
       if (window.innerWidth < 1024) {
+        // Always show at very top of page
+        if (currentY < 50) {
+          setHidden(false);
+          lastScrollY.current = currentY;
+          return;
+        }
+
         const diff = currentY - lastScrollY.current;
-        // Only react to scrolls larger than 10px to prevent jitter
-        if (diff > 10 && currentY > 80) {
+        // Hide quickly on scroll down (small threshold)
+        if (diff > 5 && currentY > 80) {
           setHidden(true);
           setIsOpen(false);
           lastScrollY.current = currentY;
-        } else if (diff < -10) {
+        // Only show on significant scroll up (50px+)
+        } else if (diff < -50) {
           setHidden(false);
           lastScrollY.current = currentY;
         }
