@@ -186,7 +186,7 @@ export default function Home() {
 
         <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-            <div className="relative order-2 lg:order-1">
+            <div className="relative hidden lg:block">
               <div className="overflow-hidden rounded-sm">
                 <img
                   src="/josh-pic.png"
@@ -194,10 +194,10 @@ export default function Home() {
                   className="w-full aspect-[4/5] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-full h-full border border-copper/10 rounded-sm -z-10 hidden lg:block" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-copper/10 rounded-sm -z-10" />
             </div>
 
-            <div className="order-1 lg:order-2">
+            <div>
               <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
                 The Champion Guarantee
               </span>
@@ -230,6 +230,15 @@ export default function Home() {
                 every service delivers precision, consistency,
                 and an experience that keeps you coming back.
               </p>
+
+              {/* Mobile-only image */}
+              <div className="lg:hidden overflow-hidden rounded-sm" style={{ marginBottom: "40px" }}>
+                <img
+                  src="/josh-pic.png"
+                  alt="Gifted Champion barber"
+                  className="w-full aspect-[4/5] object-cover"
+                />
+              </div>
 
               <div className="grid grid-cols-3 gap-6" style={{ textAlign: "center" }}>
                 {[
