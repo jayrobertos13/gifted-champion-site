@@ -189,8 +189,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <div className="overflow-hidden rounded-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80&auto=format&fit=crop"
-                  alt="Barber at work"
+                  src="/josh-pic.png"
+                  alt="Gifted Champion barber"
                   className="w-full aspect-[4/5] object-cover"
                 />
               </div>

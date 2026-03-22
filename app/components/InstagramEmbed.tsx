@@ -11,7 +11,7 @@ const videos = [
 
 export default function VideoGallery() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: "16px" }}>
+    <div className="grid grid-cols-2 lg:grid-cols-3" style={{ gap: "12px" }}>
       {videos.map((src) => (
         <div
           key={src}
