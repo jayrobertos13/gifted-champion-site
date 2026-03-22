@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import InstagramEmbed from "./components/InstagramEmbed";
+import VideoGallery from "./components/InstagramEmbed";
 
 const services = [
   {
@@ -264,7 +264,7 @@ export default function Home() {
             </div>
           </div>
 
-          <InstagramEmbed />
+          <VideoGallery />
 
           <div style={{ textAlign: "center", marginTop: "56px" }}>
             <a
