@@ -100,7 +100,7 @@ export default function Navbar() {
               </Link>
 
               {/* Book Now CTA */}
-              <a href="/#services" className="btn-copper text-[11px] py-3 px-7">
+              <a href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services" target="_blank" rel="noopener noreferrer" className="btn-copper text-[11px] py-3 px-7">
                 Book Now
               </a>
             </div>
@@ -157,7 +157,9 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/#services"
+              href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="btn-copper text-xs py-3.5 px-6 text-center mt-2"
             >

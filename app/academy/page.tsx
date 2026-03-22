@@ -115,7 +115,7 @@ export default function AcademyPage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1585747860019-8e79b4b22a9e?w=1920&q=80&auto=format"
+            src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1920&q=80&auto=format"
             alt="Barber academy"
             className="w-full h-full object-cover"
           />

@@ -86,7 +86,7 @@ export default function Home() {
           </p>
 
           <div className="animate-fade-in-up opacity-0 delay-800" style={{ marginTop: "48px" }}>
-            <a href="#services" className="btn-copper">
+            <a href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services" target="_blank" rel="noopener noreferrer" className="btn-copper">
               Book Your Appointment
             </a>
           </div>
@@ -122,7 +122,7 @@ export default function Home() {
             {services.map((service, i) => (
               <a
                 key={service.name}
-                href="https://cal.com"
+                href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
@@ -171,7 +171,7 @@ export default function Home() {
           </div>
 
           <div style={{ textAlign: "center", marginTop: "56px" }}>
-            <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper">
+            <a href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services" target="_blank" rel="noopener noreferrer" className="btn-copper">
               Book Any Service
             </a>
           </div>
@@ -350,7 +350,7 @@ export default function Home() {
               </div>
 
               <div style={{ marginTop: "48px" }}>
-                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper">
+                <a href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services" target="_blank" rel="noopener noreferrer" className="btn-copper">
                   Book Appointment
                 </a>
               </div>
@@ -396,7 +396,7 @@ export default function Home() {
             Don&apos;t just get a haircut — get a Gifted Champion cut.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "16px" }}>
-            <a href="#services" className="btn-copper">Book Now</a>
+            <a href="https://book.squareup.com/appointments/isujdqua3pu4bu/location/LK23P00R429AN/services" target="_blank" rel="noopener noreferrer" className="btn-copper">Book Now</a>
             <a href="/academy" className="btn-outline-copper">Learn the Craft</a>
           </div>
         </div>

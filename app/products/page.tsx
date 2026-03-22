@@ -30,7 +30,7 @@ const products = [
     category: "Hair Care",
     price: 22.99,
     description: "Medium hold with a natural, textured finish. Perfect for short styles.",
-    img: "https://images.unsplash.com/photo-1585747860019-8e79b4b22a9e?w=500&q=80&auto=format",
+    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=80&auto=format",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const products = [
     category: "Hair Care",
     price: 14.99,
     description: "Sleek edges, zero flaking. Humidity-resistant formula.",
-    img: "https://images.unsplash.com/photo-1585747860019-8e79b4b22a9e?w=500&q=80&auto=format",
+    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=80&auto=format",
   },
   {
     id: 7,
@@ -97,10 +97,10 @@ export default function ProductsPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative pt-40 pb-24 px-8 overflow-hidden">
+      <section className="relative pb-24 px-6 sm:px-8 overflow-hidden" style={{ paddingTop: "clamp(140px, 20vw, 200px)" }}>
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1585747860019-8e79b4b22a9e?w=1920&q=80&auto=format"
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=80&auto=format"
             alt="Products"
             className="w-full h-full object-cover"
           />
@@ -112,7 +112,7 @@ export default function ProductsPage() {
         <div className="absolute top-8 left-8 w-16 h-16 border-t border-l border-copper/20 hidden lg:block" />
         <div className="absolute top-8 right-8 w-16 h-16 border-t border-r border-copper/20 hidden lg:block" />
 
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative" style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span className="inline-flex items-center gap-3 text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
             <span className="w-10 h-[1px] bg-copper" />
             Shop
@@ -124,7 +124,7 @@ export default function ProductsPage() {
           >
             The <span className="italic copper-shimmer">Collection</span>
           </h1>
-          <p className="mt-6 text-cream-dim text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-cream-dim text-base md:text-lg leading-relaxed" style={{ marginTop: "24px", maxWidth: "576px", margin: "24px auto 0" }}>
             Premium products and merch curated by Gifted Champion. Quality you can trust.
           </p>
         </div>
@@ -132,7 +132,7 @@ export default function ProductsPage() {
 
       {/* FILTER + PRODUCTS */}
       <section className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           {/* Category filter */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 md:mb-20">
             {categories.map((cat) => (
@@ -228,7 +228,7 @@ export default function ProductsPage() {
       {/* NEWSLETTER CTA */}
       <section className="relative py-28 px-8">
         <div className="copper-line mb-20" />
-        <div className="max-w-3xl mx-auto text-center">
+        <div style={{ maxWidth: "768px", margin: "0 auto", textAlign: "center" }}>
           <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
             Stay Updated
           </span>
@@ -238,7 +238,7 @@ export default function ProductsPage() {
           >
             New Drops <span className="italic copper-shimmer">Coming Soon</span>
           </h2>
-          <p className="text-cream-dim mb-12 max-w-lg mx-auto leading-relaxed">
+          <p className="text-cream-dim leading-relaxed" style={{ maxWidth: "512px", margin: "0 auto 48px" }}>
             Follow us on Instagram to be the first to know when new products and merch drop.
           </p>
           <a
