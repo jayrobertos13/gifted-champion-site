@@ -127,11 +127,9 @@ export default function AcademyPage() {
         <div className="absolute top-8 left-8 w-16 h-16 border-t border-l border-copper/20 hidden lg:block" />
         <div className="absolute bottom-8 right-8 w-16 h-16 border-b border-r border-copper/20 hidden lg:block" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-12 py-32 w-full">
-          <div className="max-w-3xl">
+        <div className="relative z-10 w-full flex flex-col items-center" style={{ maxWidth: "900px", margin: "0 auto", padding: "128px 32px", textAlign: "center" }}>
             <div className="animate-fade-in opacity-0 delay-100">
-              <span className="inline-flex items-center gap-3 text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
-                <span className="w-10 h-[1px] bg-copper" />
+              <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
                 Gifted Champion Academy
               </span>
             </div>
@@ -145,12 +143,12 @@ export default function AcademyPage() {
               Like a <span className="italic copper-shimmer">Champion</span>
             </h1>
 
-            <p className="mt-8 text-cream-dim text-base md:text-lg max-w-xl leading-relaxed animate-fade-in-up opacity-0 delay-400">
+            <p className="text-cream-dim text-base md:text-lg leading-relaxed animate-fade-in-up opacity-0 delay-400" style={{ marginTop: "32px", maxWidth: "576px" }}>
               Master the art of barbering with step-by-step video courses taught by
               Gifted Champion. From beginner to advanced — level up your craft.
             </p>
 
-            <div className="mt-12 flex flex-col sm:flex-row gap-5 animate-fade-in-up opacity-0 delay-500">
+            <div className="mt-12 flex flex-col sm:flex-row gap-5 animate-fade-in-up opacity-0 delay-500" style={{ justifyContent: "center" }}>
               <a href="#courses" className="btn-copper">
                 View Courses
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -163,7 +161,7 @@ export default function AcademyPage() {
             </div>
 
             {/* Stats */}
-            <div className="mt-12 md:mt-20 flex gap-10 md:gap-16 animate-fade-in opacity-0 delay-700">
+            <div className="mt-12 md:mt-20 flex gap-10 md:gap-16 animate-fade-in opacity-0 delay-700" style={{ justifyContent: "center" }}>
               {[
                 { value: "500+", label: "Students" },
                 { value: "50+", label: "Lessons" },
@@ -179,14 +177,13 @@ export default function AcademyPage() {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
       {/* WHY LEARN WITH US */}
       <section className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Why Learn With Us
             </span>
@@ -196,8 +193,8 @@ export default function AcademyPage() {
             >
               What Makes This <span className="italic copper-shimmer">Different</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
@@ -232,8 +229,8 @@ export default function AcademyPage() {
           background: "linear-gradient(180deg, transparent 0%, rgba(184,115,51,0.02) 50%, transparent 100%)",
         }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Courses
             </span>
@@ -243,11 +240,11 @@ export default function AcademyPage() {
             >
               Choose Your <span className="italic copper-shimmer">Path</span>
             </h2>
-            <p className="mt-5 text-cream-dim max-w-md mx-auto leading-relaxed">
+            <p className="text-cream-dim leading-relaxed" style={{ maxWidth: "448px", margin: "20px auto 0" }}>
               Three levels of mastery. Start wherever you are and level up your game.
             </p>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
@@ -337,8 +334,8 @@ export default function AcademyPage() {
 
       {/* TESTIMONIALS */}
       <section id="testimonials" className="section-padding relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Reviews
             </span>
@@ -348,12 +345,12 @@ export default function AcademyPage() {
             >
               What Students <span className="italic copper-shimmer">Say</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" style={{ maxWidth: "1024px", margin: "0 auto" }}>
             {testimonials.map((t) => (
               <div key={t.name} className="glass-card rounded-sm p-10">
                 <div className="flex gap-1 mb-6">
@@ -384,7 +381,7 @@ export default function AcademyPage() {
           background: "linear-gradient(135deg, rgba(184,115,51,0.03) 0%, transparent 50%)",
         }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="relative">
               <div className="aspect-[4/5] rounded-sm overflow-hidden relative">
@@ -446,8 +443,8 @@ export default function AcademyPage() {
 
       {/* FAQ */}
       <section className="section-padding">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-20">
+        <div style={{ maxWidth: "768px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               FAQ
             </span>
@@ -457,8 +454,8 @@ export default function AcademyPage() {
             >
               Common <span className="italic copper-shimmer">Questions</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
@@ -495,14 +492,14 @@ export default function AcademyPage() {
       {/* FINAL CTA */}
       <section className="relative py-28 px-8">
         <div className="copper-line mb-20" />
-        <div className="max-w-3xl mx-auto text-center">
+        <div style={{ maxWidth: "768px", margin: "0 auto", textAlign: "center" }}>
           <h2
             className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-8"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Start Your <span className="italic copper-shimmer">Journey</span> Today
           </h2>
-          <p className="text-cream-dim mb-12 max-w-lg mx-auto leading-relaxed">
+          <p className="text-cream-dim leading-relaxed" style={{ maxWidth: "512px", margin: "0 auto 48px" }}>
             The game waits for no one. Invest in your craft and become the barber you were meant to be.
           </p>
           <a href="#courses" className="btn-copper">

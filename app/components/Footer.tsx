@@ -51,9 +51,8 @@ export default function Footer() {
               Hours
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }} className="text-cream-dim text-sm">
-              <p>Mon – Fri: 9am – 7pm</p>
-              <p>Saturday: 8am – 6pm</p>
-              <p>Sunday: By Appointment</p>
+              <p>Tue – Sat: 9am – 5pm</p>
+              <p>Sun – Mon: Closed</p>
             </div>
           </div>
         </div>

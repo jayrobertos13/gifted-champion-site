@@ -207,8 +207,8 @@ export default function Home() {
                   className="text-2xl md:text-3xl font-normal italic leading-snug text-cream/90"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  &ldquo;Every chair is a stage. Every cut is a performance.
-                  We don&apos;t do average — we do exceptional.&rdquo;
+                  &ldquo;Every cut is a form of art. We don&apos;t do average, we do exceptional.
+                  Every service is carried out with purpose, gratitude, and excellence.&rdquo;
                 </p>
               </div>
 
@@ -227,7 +227,7 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-6" style={{ textAlign: "center" }}>
                 {[
-                  { value: "5+", label: "Years" },
+                  { value: "9+", label: "Years" },
                   { value: "1,000+", label: "Clients" },
                   { value: "5.0", label: "Rating" },
                 ].map((stat) => (
@@ -328,9 +328,8 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Hours</p>
-                    <p className="text-cream text-sm leading-relaxed">Mon–Fri: 9am – 7pm</p>
-                    <p className="text-cream text-sm leading-relaxed">Sat: 8am – 6pm</p>
-                    <p className="text-cream text-sm leading-relaxed">Sun: By Appointment</p>
+                    <p className="text-cream text-sm leading-relaxed">Tue – Sat: 9am – 5pm</p>
+                    <p className="text-cream text-sm leading-relaxed">Sun – Mon: Closed</p>
                   </div>
                 </div>
 
