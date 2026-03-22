@@ -41,7 +41,6 @@ export default function Home() {
 
       {/* ══════════ HERO ══════════ */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* BG image */}
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=80&auto=format&fit=crop"
@@ -52,29 +51,28 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/40" />
         </div>
 
-        {/* Corner accents */}
         <div className="absolute top-10 left-10 w-24 h-24 border-t border-l border-copper/20 hidden lg:block" />
         <div className="absolute top-10 right-10 w-24 h-24 border-t border-r border-copper/20 hidden lg:block" />
         <div className="absolute bottom-10 left-10 w-24 h-24 border-b border-l border-copper/20 hidden lg:block" />
         <div className="absolute bottom-10 right-10 w-24 h-24 border-b border-r border-copper/20 hidden lg:block" />
 
-        <div className="relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto flex flex-col items-center">
-          {/* Logo */}
-          <div className="animate-scale-in opacity-0 delay-200 flex justify-center">
+        <div
+          className="relative z-10 flex flex-col items-center"
+          style={{ maxWidth: "800px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}
+        >
+          <div className="animate-scale-in opacity-0 delay-200">
             <img
               src="/logo.png"
               alt="Gifted Champion"
               className="logo-img"
-              style={{ width: "min(280px, 55vw)", height: "auto" }}
+              style={{ width: "min(280px, 55vw)", height: "auto", margin: "0 auto" }}
             />
           </div>
 
-          {/* Divider */}
-          <div className="flex justify-center mt-10 mb-8 animate-fade-in opacity-0 delay-400">
-            <div className="copper-line w-20" />
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "40px", marginBottom: "32px" }} className="animate-fade-in opacity-0 delay-400">
+            <div className="copper-line" style={{ width: "80px" }} />
           </div>
 
-          {/* Headline */}
           <h1
             className="text-xl md:text-2xl lg:text-3xl font-normal tracking-[0.15em] uppercase animate-fade-in-up opacity-0 delay-500"
             style={{ fontFamily: "var(--font-display)" }}
@@ -82,19 +80,17 @@ export default function Home() {
             Master Craftsmanship. <span className="copper-shimmer">Champion Style.</span>
           </h1>
 
-          <p className="mt-6 text-cream-dim text-sm md:text-base max-w-md mx-auto tracking-wide leading-relaxed animate-fade-in opacity-0 delay-700">
+          <p className="text-cream-dim text-sm md:text-base tracking-wide leading-relaxed animate-fade-in opacity-0 delay-700" style={{ marginTop: "24px", maxWidth: "450px" }}>
             Premium cuts, precision fades, and artistry that speaks for itself.
           </p>
 
-          {/* CTA — single button */}
-          <div className="mt-12 animate-fade-in-up opacity-0 delay-800">
+          <div className="animate-fade-in-up opacity-0 delay-800" style={{ marginTop: "48px" }}>
             <a href="#services" className="btn-copper">
               Book Your Appointment
             </a>
           </div>
         </div>
 
-        {/* Scroll */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float hidden sm:block">
           <div className="flex flex-col items-center gap-2">
             <span className="text-copper/40 text-[9px] tracking-[0.3em] uppercase">Scroll</span>
@@ -105,8 +101,8 @@ export default function Home() {
 
       {/* ══════════ SERVICES ══════════ */}
       <section id="services" className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-6xl mx-auto px-2 sm:px-0">
-          <div className="text-center mb-16 md:mb-20">
+        <div className="relative z-10" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Our Services
             </span>
@@ -116,13 +112,12 @@ export default function Home() {
             >
               The <span className="italic copper-shimmer">Menu</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
-          {/* Service list */}
-          <div className="max-w-3xl mx-auto">
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
             {services.map((service, i) => (
               <a
                 key={service.name}
@@ -131,10 +126,10 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className="flex items-center gap-4 sm:gap-6 md:gap-8 py-8 md:py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500 px-2 sm:px-4 md:px-8">
+                <div className="flex items-center gap-4 sm:gap-6 md:gap-8 py-8 md:py-9 border-b border-white/[0.06] hover:border-copper/20 transition-all duration-500" style={{ padding: "32px 16px" }}>
                   <span
-                    className="text-copper/15 text-3xl md:text-4xl font-normal w-12 shrink-0 hidden sm:block text-center"
-                    style={{ fontFamily: "var(--font-display)" }}
+                    className="text-copper/15 text-3xl md:text-4xl font-normal shrink-0 hidden sm:block"
+                    style={{ fontFamily: "var(--font-display)", width: "48px", textAlign: "center" }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -151,7 +146,7 @@ export default function Home() {
                         {service.duration}
                       </span>
                     </div>
-                    <p className="text-cream-dim text-sm mt-2 max-w-sm leading-relaxed">
+                    <p className="text-cream-dim text-sm leading-relaxed" style={{ marginTop: "8px", maxWidth: "380px" }}>
                       {service.description}
                     </p>
                   </div>
@@ -174,7 +169,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-14">
+          <div style={{ textAlign: "center", marginTop: "56px" }}>
             <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper">
               Book Any Service
             </a>
@@ -188,9 +183,8 @@ export default function Home() {
           background: "linear-gradient(135deg, rgba(184,115,51,0.03) 0%, transparent 40%, rgba(184,115,51,0.02) 100%)",
         }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-            {/* Portrait */}
             <div className="relative order-2 lg:order-1">
               <div className="overflow-hidden rounded-sm">
                 <img
@@ -202,13 +196,12 @@ export default function Home() {
               <div className="absolute -bottom-4 -right-4 w-full h-full border border-copper/10 rounded-sm -z-10 hidden lg:block" />
             </div>
 
-            {/* Copy */}
             <div className="order-1 lg:order-2">
               <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
                 The Champion Guarantee
               </span>
 
-              <div className="mt-8 mb-10 relative pl-7 border-l-2 border-copper/30">
+              <div className="relative border-l-2 border-copper/30" style={{ marginTop: "32px", marginBottom: "40px", paddingLeft: "28px" }}>
                 <p
                   className="text-2xl md:text-3xl font-normal italic leading-snug text-cream/90"
                   style={{ fontFamily: "var(--font-display)" }}
@@ -218,20 +211,20 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="copper-line-left w-16 mb-8" />
+              <div className="copper-line-left" style={{ width: "64px", marginBottom: "32px" }} />
 
-              <p className="text-cream-dim leading-relaxed mb-6">
+              <p className="text-cream-dim leading-relaxed" style={{ marginBottom: "24px" }}>
                 At Gifted Champion, respect for the craft is everything. A haircut
                 should make you feel like the best version of yourself — confident,
                 sharp, and ready for anything.
               </p>
-              <p className="text-cream-dim leading-relaxed mb-12">
+              <p className="text-cream-dim leading-relaxed" style={{ marginBottom: "48px" }}>
                 Built on classic barbering standards and elevated with modern artistry,
                 every service delivers precision, consistency,
                 and an experience that keeps you coming back.
               </p>
 
-              <div className="grid grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-3 gap-6" style={{ textAlign: "center" }}>
                 {[
                   { value: "5+", label: "Years" },
                   { value: "1,000+", label: "Clients" },
@@ -241,7 +234,7 @@ export default function Home() {
                     <div className="text-3xl font-normal text-copper" style={{ fontFamily: "var(--font-display)" }}>
                       {stat.value}
                     </div>
-                    <div className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mt-1.5">
+                    <div className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginTop: "6px" }}>
                       {stat.label}
                     </div>
                   </div>
@@ -254,8 +247,8 @@ export default function Home() {
 
       {/* ══════════ GALLERY ══════════ */}
       <section id="gallery" className="section-padding relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 md:mb-20">
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               The Work
             </span>
@@ -265,12 +258,11 @@ export default function Home() {
             >
               Precision in Every <span className="italic copper-shimmer">Detail</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
-          {/* Masonry grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[260px]">
             {[
               { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80&auto=format&fit=crop", alt: "Precision fade", tall: true },
@@ -300,7 +292,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-14">
+          <div style={{ textAlign: "center", marginTop: "56px" }}>
             <a
               href="https://www.instagram.com/giftedchampion/"
               target="_blank"
@@ -316,8 +308,8 @@ export default function Home() {
 
       {/* ══════════ CONTACT ══════════ */}
       <section id="contact" className="section-padding relative texture-dark">
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-16 md:mb-20">
+        <div className="relative z-10" style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span className="text-copper text-[11px] tracking-[0.4em] uppercase font-medium">
               Get in Touch
             </span>
@@ -327,28 +319,27 @@ export default function Home() {
             >
               Visit the <span className="italic copper-shimmer">Shop</span>
             </h2>
-            <div className="flex justify-center mt-8">
-              <div className="copper-line w-16" />
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}>
+              <div className="copper-line" style={{ width: "64px" }} />
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            {/* Contact info */}
-            <div className="glass-card rounded-sm p-8 sm:p-10 md:p-14">
+            <div className="glass-card rounded-sm" style={{ padding: "clamp(32px, 5vw, 56px)" }}>
               <h3
-                className="text-2xl font-normal text-cream mb-10"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="text-2xl font-normal text-cream"
+                style={{ fontFamily: "var(--font-display)", marginBottom: "40px" }}
               >
                 Book your next visit
               </h3>
 
-              <div className="space-y-9">
+              <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 rounded-full border border-copper/20 flex items-center justify-center shrink-0">
                     <svg className="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Instagram</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Instagram</p>
                     <a href="https://www.instagram.com/giftedchampion/" target="_blank" rel="noopener noreferrer" className="text-copper hover:text-copper-light transition-colors">
                       @giftedchampion
                     </a>
@@ -362,7 +353,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Hours</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Hours</p>
                     <p className="text-cream text-sm leading-relaxed">Mon–Fri: 9am – 7pm</p>
                     <p className="text-cream text-sm leading-relaxed">Sat: 8am – 6pm</p>
                     <p className="text-cream text-sm leading-relaxed">Sun: By Appointment</p>
@@ -376,21 +367,20 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase mb-1.5">Phone</p>
+                    <p className="text-cream-dim text-[10px] tracking-[0.2em] uppercase" style={{ marginBottom: "6px" }}>Phone</p>
                     <p className="text-cream text-sm">DM on Instagram to book</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
-                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper w-full sm:w-auto">
+              <div style={{ marginTop: "48px" }}>
+                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-copper">
                   Book Appointment
                 </a>
               </div>
             </div>
 
-            {/* Map / location placeholder */}
-            <div className="glass-card rounded-sm overflow-hidden relative min-h-[420px]">
+            <div className="glass-card rounded-sm overflow-hidden relative" style={{ minHeight: "420px" }}>
               <div className="absolute inset-0 flex items-center justify-center" style={{
                 background: "linear-gradient(145deg, #1a1a1a, #111)"
               }}>
@@ -398,15 +388,15 @@ export default function Home() {
                   backgroundImage: "linear-gradient(rgba(184,115,51,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(184,115,51,0.08) 1px, transparent 1px)",
                   backgroundSize: "30px 30px",
                 }} />
-                <div className="text-center relative z-10">
-                  <div className="w-14 h-14 rounded-full border border-copper/30 flex items-center justify-center mx-auto mb-5">
+                <div style={{ textAlign: "center", position: "relative", zIndex: 10 }}>
+                  <div className="rounded-full border border-copper/30 flex items-center justify-center" style={{ width: "56px", height: "56px", margin: "0 auto 20px" }}>
                     <svg className="w-6 h-6 text-copper" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </div>
                   <p className="text-cream text-lg" style={{ fontFamily: "var(--font-display)" }}>Location Coming Soon</p>
-                  <p className="text-cream-dim text-sm mt-3">DM on Instagram for directions</p>
+                  <p className="text-cream-dim text-sm" style={{ marginTop: "12px" }}>DM on Instagram for directions</p>
                 </div>
               </div>
             </div>
@@ -415,24 +405,24 @@ export default function Home() {
       </section>
 
       {/* ══════════ FINAL CTA ══════════ */}
-      <section className="relative py-24 md:py-32 px-6 sm:px-8 overflow-hidden">
-        <div className="copper-line mb-16 md:mb-20" />
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative overflow-hidden" style={{ padding: "96px 24px" }}>
+        <div className="copper-line" style={{ marginBottom: "80px" }} />
+        <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
           <h2
-            className="text-3xl md:text-5xl font-normal tracking-tight mb-6 md:mb-8"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-3xl md:text-5xl font-normal tracking-tight"
+            style={{ fontFamily: "var(--font-display)", marginBottom: "32px" }}
           >
             Ready for the <span className="italic copper-shimmer">Experience</span>?
           </h2>
-          <p className="text-cream-dim mb-10 md:mb-12 max-w-lg mx-auto leading-relaxed">
+          <p className="text-cream-dim leading-relaxed" style={{ maxWidth: "480px", margin: "0 auto 48px" }}>
             Don&apos;t just get a haircut — get a Gifted Champion cut.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "16px" }}>
             <a href="#services" className="btn-copper">Book Now</a>
             <a href="/academy" className="btn-outline-copper">Learn the Craft</a>
           </div>
         </div>
-        <div className="copper-line mt-16 md:mt-20" />
+        <div className="copper-line" style={{ marginTop: "80px" }} />
       </section>
 
       <Footer />
